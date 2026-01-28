@@ -1,143 +1,57 @@
-![Expo](https://img.shields.io/badge/Expo-000000?style=flat&logo=expo&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
-![NativeWind](https://img.shields.io/badge/NativeWind-Tailwind%20for%20React%20Native-38BDF8)
-![License](https://img.shields.io/badge/License-MIT-green)
+🌍 Travel App UI
+================
 
+A modern **Travel App UI** built with **Expo + React Native**, styled using **NativeWind (Tailwind CSS for React Native)**.\
+Focused on clean layouts, smooth UX, and reusable components.
 
-# Expo NativeWind Boilerplate
+✨ Features
+----------
 
-A ready-to-use **React Native Expo + NativeWind (Tailwind CSS)** boilerplate — so you can skip the painful setup and start building immediately.
+-   📱 Cross-platform (iOS & Android)
+-   🎨 Utility-first styling with NativeWind (Tailwind CSS)
+-   ⚡ Built on Expo for fast development
+-   🧩 Reusable UI components
+-   🗺️ Travel-focused layouts (destinations, cards, lists, etc.)
 
-Setting up NativeWind correctly in an Expo project can be frustrating:
-- Babel config
-- Tailwind config
-- Metro issues
-- Expo + NativeWind compatibility warnings
-- Cache problems
-- Repeated trial & error
+🛠 Tech Stack
+-------------
 
-This boilerplate solves all of that once and for all.
+-   **Expo**
+-   **React Native**
+-   **NativeWind**
+-   **Tailwind CSS**
 
----
+🚀 Getting Started
+------------------
 
-## 🚀 What’s Included
+### 1\. Clone the repo
 
-- ✅ Expo (TypeScript)
-- ✅ NativeWind (Tailwind CSS) fully configured
-- ✅ Metro + Babel setup done
-- ✅ Minimal starting structure (easy to extend as your app grows)
-- ✅ Rename script (auto-updates app name & slug)
-- ✅ Clean cache behavior (reset scripts)
-- ✅ Ready to run on **Expo Go**, Android, and iOS
-- ✅ Zero manual NativeWind setup
-- ✅ Works immediately with Expo Go
+`git clone https://github.com/shafiqshams/travel-app-ui.git cd travel-app-ui `
 
-You clone → install → run.  
-That’s it.
+### 2\. Install dependencies
 
----
+`npm install # or yarn install `
 
-## 📦 Requirements
+### 3\. Start the app
 
-- Node.js (LTS recommended)
-- Yarn (recommended)
-- Expo Go app (for running on a real device) or use Android Studio or Xcode. 
-- **Expo CLI is used via `npx` / `yarn` and does not need to be installed globally.**
----
+`npx expo start `
 
-## 🧪 Quick Start (Recommended Workflow)
+Scan the QR code with **Expo Go** or run on an emulator.
 
-Use **degit** to download the boilerplate **without git history**:
+🎨 Styling
+----------
 
-```bash
-npx degit shafiqshams/expo-nativewind-boilerplate my-app
-cd my-app
-yarn setup or yarn install
-```
-That’s it.
-Your app is installed, renamed, and running 🚀
+This project uses **NativeWind**, bringing Tailwind-style utility classes to React Native.
 
-#### What happens during yarn setup?
-- Installs dependencies
-- Automatically renames:
-  - package.json
-  - Expo app name
-  - Expo slug
-- Uses the folder name (my-app) as the base
-- No manual changes needed.
-
-#### Why degit?
-It:
-- copies files only
-- removes all Git metadata
-- gives a **clean starting point**
-- avoids inheriting commit history.
-
-**Because there is no Git initialised, you must:**
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-```
-**This project becomes yours with a clean Git history, ready for development.**
-
----
-
-## 🏃 Running the App
-```bash
-yarn start      # Expo Go
-yarn android    # Android emulator
-yarn ios        # iOS simulator (macOS)
-```
----
-
-## 🎨 NativeWind Usage Example
-
+Example:
 ```tsx
-// App.tsx
-import { View, Text } from "react-native";
-export default function App() {
-  return (
-    <View className="flex-1 items-center justify-center bg-black">
-      <Text className="text-white text-xl font-bold">
-        NativeWind is working 🚀
-      </Text>
-    </View>
-  );
-}
+<View className="flex-1 bg-white items-center justify-center">
+  <Text className="text-xl font-bold">Explore the world 🌍</Text>
+</View>
 ```
----
 
-### 🛠 Scripts
-```
-yarn setup        # Install dependencies, auto-rename app, and start Expo
-yarn start        # Start the Expo development server
-yarn android      # Run the app on Android emulator/device
-yarn ios          # Run the app on iOS simulator (macOS only)
-yarn clean        # Remove node_modules and Expo cache folders
-yarn reinstall    # Clean project and reinstall dependencies
-yarn reset        # Deep clean caches and reinstall dependencies
-yarn start:clean  # Start Expo with a clean cache
-```
----
+📌 Notes
+--------
 
-### 🤔 Why this boilerplate?
-
-Setting up **Expo + NativeWind** from scratch is doable — but in practice it often:
-
-- Takes more time than expected
-- Breaks due to version or config mismatches
-- Produces unclear or confusing error messages
-- Repeats the same setup work for every new project
-
-**This boilerplate is meant to remove that overhead and give you a ready-to-use starting point in minutes.**
-
----
-
-### ⭐ Final Note
-
-If this boilerplate saved you time, consider starring the repo⭐
-
-It helps other developers find it too.
-
-**Happy coding! 🚀**
+-   This project focuses on **UI only** (no backend integration).
+-   Easily extendable with APIs, maps, and authentication.
