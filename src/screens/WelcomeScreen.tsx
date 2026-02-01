@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { RootStackParamList } from "../navigation/RootStack";
 
 type WelcomeScreenProps = NativeStackScreenProps<RootStackParamList, "Welcome">;
@@ -21,6 +21,13 @@ const WelcomeScreen = ({ navigation }: WelcomeScreenProps) => {
             Plan, book, and explore the world—without the stress.
           </Text>
         </View>
+
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Home")}
+          className="mt-5 bg-red-400 rounded-full py-4 px-8 mx-auto"
+        >
+          <Text className="text-white font-bold text-lg">Explore Now!</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
