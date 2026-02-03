@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Search from "../components/Search";
 
 const HomeScreen = () => {
+  const [searchText, setSearchText] = useState<string>("");
+
   return (
     <SafeAreaView className="flex flex-1 bg-white">
       <ScrollView className="mx-5" showsVerticalScrollIndicator={false}>
@@ -18,6 +21,8 @@ const HomeScreen = () => {
             resizeMode="contain"
           />
         </View>
+        {/* SearchBar */}
+        <Search searchText={searchText} onChangeText={setSearchText} />
       </ScrollView>
     </SafeAreaView>
   );
