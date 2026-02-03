@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const HomeScreen = () => {
@@ -11,6 +11,12 @@ const HomeScreen = () => {
           <Text className="font-bold text-neutral-700 text-3xl">
             Explore Top Places
           </Text>
+
+          <Image
+            source={require("../../assets/images/profile.webp")}
+            className="w-16 h-16 rounded-full"
+            resizeMode="contain"
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
