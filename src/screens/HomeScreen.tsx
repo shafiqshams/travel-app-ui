@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CategoryList from "../components/CategoryList";
+import FilterBar from "../components/FilterBar";
 import Search from "../components/Search";
 import { categories } from "../data/categories";
 
@@ -28,6 +29,9 @@ const HomeScreen = () => {
 
         {/* Categories */}
         <CategoryList categories={categories} />
+
+        {/* FilterBar */}
+        <FilterBar />
       </ScrollView>
     </SafeAreaView>
   );
