@@ -19,3 +19,24 @@ export const filterDestinations = (
 
   return results;
 };
+
+const getFilteredDestinations = (
+  selectedFilter: string,
+  destinations: Destination[],
+) => {
+  switch (selectedFilter) {
+    case "Popular":
+      return destinations.filter((destination) => destination.rating >= 4.2);
+
+    case "Recommended":
+      return destinations.filter(
+        (destination) => destination.rating >= 3.5 && destination.price <= 1800,
+      );
+
+    case "Budget":
+      return destinations.filter((destination) => destination.price <= 1000);
+
+    default:
+      return destinations;
+  }
+};
