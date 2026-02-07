@@ -7,6 +7,7 @@ export interface Destination {
   distance: string;
   weather: string;
   price: number;
+  rating: number;
   category: CategoryType;
   shortDescription: string;
   longDescription: string;
