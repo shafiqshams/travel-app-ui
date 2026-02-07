@@ -14,7 +14,11 @@ const HomeScreen = () => {
   const [searchText, setSearchText] = useState<string>("");
   const [selectedFilter, setSelectedFilter] = useState<string>("All");
   const debounceSearch = useDebounce(searchText);
-  const filteredDestinations = filterDestinations(destinations, debounceSearch);
+  const filteredDestinations = filterDestinations(
+    destinations,
+    debounceSearch,
+    selectedFilter,
+  );
 
   return (
     <SafeAreaView className="flex flex-1 bg-white">
