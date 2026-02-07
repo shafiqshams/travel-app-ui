@@ -1,6 +1,6 @@
 import { CategoryType } from "./category";
 
-export type Destination = {
+export interface Destination {
   id: string;
   title: string;
   duration: string;
@@ -11,4 +11,4 @@ export type Destination = {
   shortDescription: string;
   longDescription: string;
   image: number;
-};
+}
