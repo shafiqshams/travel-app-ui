@@ -3,9 +3,9 @@ import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { Category } from "../types/category";
 import CategoryItem from "./CategoryItem";
 
-type CategoryListProps = {
+interface CategoryListProps {
   categories: Category[];
-};
+}
 
 const CategoryList = ({ categories }: CategoryListProps) => {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
 import { Image, Text, TouchableOpacity } from "react-native";
 
-type CategoryItemProps = {
+interface CategoryItemProps {
   id: number;
   title: string;
   image: number;
-};
+}
 
 const CategoryItem = ({ id, title, image }: CategoryItemProps) => {
   return (
