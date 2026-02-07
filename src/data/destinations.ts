@@ -1,6 +1,7 @@
 import { CategoryType } from "../types/category";
+import { Destination } from "../types/destination";
 
-export const destinations = [
+export const destinations: Destination[] = [
   {
     id: "1",
     title: "Osaka Castle",
