@@ -7,9 +7,13 @@ import FilterBar from "../components/FilterBar";
 import Search from "../components/Search";
 import { categories } from "../data/categories";
 import { destinations } from "../data/destinations";
+import { useDebounce } from "../hooks/useDebounce";
+import { filterDestinations } from "../utils/destinations";
 
 const HomeScreen = () => {
   const [searchText, setSearchText] = useState<string>("");
+  const debounceSearch = useDebounce(searchText);
+  const filteredDestinations = filterDestinations(destinations, debounceSearch);
 
   return (
     <SafeAreaView className="flex flex-1 bg-white">
@@ -36,7 +40,7 @@ const HomeScreen = () => {
         <FilterBar />
 
         {/* Destinations */}
-        <DestinationList destinations={destinations} />
+        <DestinationList destinations={filteredDestinations} />
       </ScrollView>
     </SafeAreaView>
   );
