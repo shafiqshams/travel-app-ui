@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CategoryList from "../components/CategoryList";
+import DestinationList from "../components/DestinationList";
 import FilterBar from "../components/FilterBar";
 import Search from "../components/Search";
 import { categories } from "../data/categories";
+import { destinations } from "../data/destinations";
 
 const HomeScreen = () => {
   const [searchText, setSearchText] = useState<string>("");
@@ -32,6 +34,9 @@ const HomeScreen = () => {
 
         {/* FilterBar */}
         <FilterBar />
+
+        {/* Destinations */}
+        <DestinationList destinations={destinations} />
       </ScrollView>
     </SafeAreaView>
   );
