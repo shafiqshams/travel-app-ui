@@ -4,11 +4,13 @@ export const filterDestinations = (
   destinations: Destination[],
   searchText: string,
 ): Destination[] => {
-  if (!searchText) return destinations;
+  let results = destinations;
 
-  const query = searchText.toLowerCase().trim();
+  const query = searchText?.trim().toLowerCase();
 
-  return destinations.filter((destination) =>
-    destination.title.toLowerCase().includes(query),
-  );
+  if (query) {
+    results = results.filter((d) => d.title.toLowerCase().includes(query));
+  }
+
+  return results;
 };
