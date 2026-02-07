@@ -9,6 +9,7 @@ export const destinations: Destination[] = [
     distance: "400 KM",
     weather: "20 C",
     price: 1200,
+    rating: 4.8,
     category: CategoryType.FOREST,
     shortDescription: "A historic Japanese castle surrounded by lush greenery.",
     longDescription:
@@ -22,6 +23,7 @@ export const destinations: Destination[] = [
     distance: "1200 KM",
     weather: "29 C",
     price: 4200,
+    rating: 4.9,
     category: CategoryType.OCEAN,
     shortDescription: "Crystal clear waters and overwater villas.",
     longDescription:
@@ -35,6 +37,7 @@ export const destinations: Destination[] = [
     distance: "980 KM",
     weather: "28 C",
     price: 3900,
+    rating: 4.7,
     category: CategoryType.BEACH,
     shortDescription: "A tropical paradise with turquoise lagoons.",
     longDescription:
@@ -48,6 +51,7 @@ export const destinations: Destination[] = [
     distance: "600 KM",
     weather: "10 C",
     price: 2500,
+    rating: 4.8,
     category: CategoryType.MOUNTAIN,
     shortDescription: "Snow-capped mountains and scenic valleys.",
     longDescription:
@@ -61,6 +65,7 @@ export const destinations: Destination[] = [
     distance: "1400 KM",
     weather: "32 C",
     price: 1800,
+    rating: 3.5,
     category: CategoryType.FOREST,
     shortDescription: "The world’s largest tropical rainforest.",
     longDescription:
@@ -74,6 +79,7 @@ export const destinations: Destination[] = [
     distance: "700 KM",
     weather: "40 C",
     price: 1500,
+    rating: 2.2,
     category: CategoryType.DESERT,
     shortDescription: "Golden sand dunes stretching endlessly.",
     longDescription:
@@ -87,6 +93,7 @@ export const destinations: Destination[] = [
     distance: "320 KM",
     weather: "22 C",
     price: 2000,
+    rating: 4.6,
     category: CategoryType.LAKE,
     shortDescription: "A romantic lake surrounded by mountains.",
     longDescription:
@@ -100,6 +107,7 @@ export const destinations: Destination[] = [
     distance: "1800 KM",
     weather: "30 C",
     price: 3200,
+    rating: 4.1,
     category: CategoryType.OCEAN,
     shortDescription: "The world’s largest coral reef system.",
     longDescription:
@@ -113,6 +121,7 @@ export const destinations: Destination[] = [
     distance: "350 KM",
     weather: "26 C",
     price: 1600,
+    rating: 3.4,
     category: CategoryType.BEACH,
     shortDescription: "Australia’s most famous beach.",
     longDescription:
@@ -126,25 +135,13 @@ export const destinations: Destination[] = [
     distance: "880 KM",
     weather: "27 C",
     price: 2200,
+    rating: 2.3,
     category: CategoryType.BEACH,
     shortDescription: "Iconic Hawaiian beach destination.",
     longDescription:
       "Waikiki Beach offers golden sand, calm waters, and a lively atmosphere in Honolulu.",
     image: require("../../assets/images/destinations/waikiki_beach.webp"),
   },
-  // {
-  //   id: "11",
-  //   title: "Mount Everest Base Camp",
-  //   duration: "15 Days",
-  //   distance: "900 KM",
-  //   weather: "-5 C",
-  //   price: 3000,
-  //   category: CategoryType.MOUNTAIN,
-  //   shortDescription: "The gateway to the world’s highest mountain.",
-  //   longDescription:
-  //     "Everest Base Camp is a dream trek for adventure seekers with dramatic Himalayan views.",
-  //   image: require("../../assets/images/destinations/mount_everest_base_camp.webp"),
-  // },
   {
     id: "12",
     title: "Rocky Mountains",
@@ -152,6 +149,7 @@ export const destinations: Destination[] = [
     distance: "500 KM",
     weather: "12 C",
     price: 1900,
+    rating: 4.5,
     category: CategoryType.MOUNTAIN,
     shortDescription: "Majestic mountain range in North America.",
     longDescription:
@@ -165,6 +163,7 @@ export const destinations: Destination[] = [
     distance: "260 KM",
     weather: "16 C",
     price: 1300,
+    rating: 3.3,
     category: CategoryType.FOREST,
     shortDescription: "Dense forests and fairy-tale villages.",
     longDescription:
@@ -178,6 +177,7 @@ export const destinations: Destination[] = [
     distance: "300 KM",
     weather: "14 C",
     price: 1100,
+    rating: 3.6,
     category: CategoryType.FOREST,
     shortDescription: "Home to the tallest trees on Earth.",
     longDescription:
@@ -191,6 +191,7 @@ export const destinations: Destination[] = [
     distance: "120 KM",
     weather: "38 C",
     price: 800,
+    rating: 3.1,
     category: CategoryType.DESERT,
     shortDescription: "Adventure in golden dunes.",
     longDescription:
@@ -204,6 +205,7 @@ export const destinations: Destination[] = [
     distance: "640 KM",
     weather: "25 C",
     price: 1700,
+    rating: 2.4,
     category: CategoryType.DESERT,
     shortDescription: "The driest desert on Earth.",
     longDescription:
@@ -217,6 +219,7 @@ export const destinations: Destination[] = [
     distance: "420 KM",
     weather: "18 C",
     price: 1800,
+    rating: 3.5,
     category: CategoryType.LAKE,
     shortDescription: "Clear blue waters and alpine scenery.",
     longDescription:
@@ -230,6 +233,7 @@ export const destinations: Destination[] = [
     distance: "780 KM",
     weather: "8 C",
     price: 1600,
+    rating: 4.7,
     category: CategoryType.LAKE,
     shortDescription: "The deepest lake in the world.",
     longDescription:
@@ -243,6 +247,7 @@ export const destinations: Destination[] = [
     distance: "500 KM",
     weather: "24 C",
     price: 1400,
+    rating: 4.9,
     category: CategoryType.WATERFALL,
     shortDescription: "Massive waterfall system in South America.",
     longDescription:
@@ -256,6 +261,7 @@ export const destinations: Destination[] = [
     distance: "620 KM",
     weather: "26 C",
     price: 2000,
+    rating: 4.8,
     category: CategoryType.WATERFALL,
     shortDescription: "The highest waterfall in the world.",
     longDescription:
@@ -269,6 +275,7 @@ export const destinations: Destination[] = [
     distance: "280 KM",
     weather: "18 C",
     price: 900,
+    rating: 3.6,
     category: CategoryType.WATERFALL,
     shortDescription: "One of the world’s most powerful waterfalls.",
     longDescription:
@@ -282,6 +289,7 @@ export const destinations: Destination[] = [
     distance: "100 KM",
     weather: "15 C",
     price: 850,
+    rating: 4.9,
     category: CategoryType.MOUNTAIN,
     shortDescription:
       "Iconic snow-capped peak with breathtaking sunrise views.",
@@ -296,6 +304,7 @@ export const destinations: Destination[] = [
     distance: "15 KM",
     weather: "22 C",
     price: 50,
+    rating: 4.3,
     category: CategoryType.FOREST,
     shortDescription: "A natural forest of towering green bamboo stalks.",
     longDescription:
@@ -309,6 +318,7 @@ export const destinations: Destination[] = [
     distance: "1500 KM",
     weather: "28 C",
     price: 2100,
+    rating: 3.6,
     category: CategoryType.BEACH,
     shortDescription: "Crystal clear turquoise waters and white sandy shores.",
     longDescription:
@@ -322,6 +332,7 @@ export const destinations: Destination[] = [
     distance: "80 KM",
     weather: "12 C",
     price: 450,
+    rating: 2.4,
     category: CategoryType.LAKE,
     shortDescription: "A scenic crater lake known for its views of Mt. Fuji.",
     longDescription:
@@ -335,6 +346,7 @@ export const destinations: Destination[] = [
     distance: "400 KM",
     weather: "18 C",
     price: 300,
+    rating: 4.8,
     category: CategoryType.WATERFALL,
     shortDescription: "One of Japan's tallest and most beautiful waterfalls.",
     longDescription:
@@ -348,6 +360,7 @@ export const destinations: Destination[] = [
     distance: "600 KM",
     weather: "32 C",
     price: 400,
+    rating: 1.2,
     category: CategoryType.DESERT,
     shortDescription: "Massive sand dunes stretching along the coast.",
     longDescription:
@@ -361,6 +374,7 @@ export const destinations: Destination[] = [
     distance: "2000 KM",
     weather: "24 C",
     price: 3500,
+    rating: 3.5,
     category: CategoryType.OCEAN,
     shortDescription: "Deep sea exploration and luxury cruise experience.",
     longDescription:
@@ -374,6 +388,7 @@ export const destinations: Destination[] = [
     distance: "110 KM",
     weather: "14 C",
     price: 120,
+    rating: 2.1,
     category: CategoryType.FOREST,
     shortDescription: "A dense, historic woodland at the base of Mt. Fuji.",
     longDescription:
@@ -387,6 +402,7 @@ export const destinations: Destination[] = [
     distance: "150 KM",
     weather: "10 C",
     price: 200,
+    rating: 3.7,
     category: CategoryType.WATERFALL,
     shortDescription: "Magnificent waterfall draining Lake Chuzenji.",
     longDescription:
@@ -400,6 +416,7 @@ export const destinations: Destination[] = [
     distance: "300 KM",
     weather: "8 C",
     price: 1400,
+    rating: 4.8,
     category: CategoryType.MOUNTAIN,
     shortDescription: "Breathtaking high-altitude trekking routes.",
     longDescription:
