@@ -12,6 +12,7 @@ import { filterDestinations } from "../utils/destinations";
 
 const HomeScreen = () => {
   const [searchText, setSearchText] = useState<string>("");
+  const [selectedFilter, setSelectedFilter] = useState<string>("All");
   const debounceSearch = useDebounce(searchText);
   const filteredDestinations = filterDestinations(destinations, debounceSearch);
 
@@ -37,7 +38,10 @@ const HomeScreen = () => {
         <CategoryList categories={categories} />
 
         {/* FilterBar */}
-        <FilterBar />
+        <FilterBar
+          selectedFilter={selectedFilter}
+          onSelectFilter={(filter) => setSelectedFilter(filter)}
+        />
 
         {/* Destinations */}
         <DestinationList destinations={filteredDestinations} />

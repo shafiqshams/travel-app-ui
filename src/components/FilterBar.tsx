@@ -2,9 +2,13 @@ import clsx from "clsx";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 
-const FilterBar = () => {
-  const filters = ["All", "Popular", "Recommended", "More"];
-  const [selectedFilter, setSelectedFilter] = React.useState<string>("Popular");
+interface FilterBarProps {
+  selectedFilter: string;
+  onSelectFilter: (filter: string) => void;
+}
+
+const FilterBar = ({ selectedFilter, onSelectFilter }: FilterBarProps) => {
+  const filters = ["All", "Popular", "Recommended", "Budget"];
 
   return (
     <View className="flex flex-row justify-around items-center my-8 p-1 bg-neutral-100 rounded-full">
@@ -13,7 +17,7 @@ const FilterBar = () => {
 
         return (
           <TouchableOpacity
-            onPress={() => setSelectedFilter(filter)}
+            onPress={() => onSelectFilter(filter)}
             className={clsx(
               "p-4 my-1 rounded-full",
               isSelected && "bg-red-300",
