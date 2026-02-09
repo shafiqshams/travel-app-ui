@@ -1,13 +1,18 @@
 import React from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
-import { Category } from "../types/category";
-import CategoryItem from "./CategoryItem";
+import { Category, CategoryType } from "../types/category";
 
 interface CategoryListProps {
   categories: Category[];
+  selectedCategory: CategoryType | undefined;
+  onSelectCategory: (categoryType: CategoryType) => void;
 }
 
-const CategoryList = ({ categories }: CategoryListProps) => {
+const CategoryList = ({
+  categories,
+  selectedCategory,
+  onSelectCategory,
+}: CategoryListProps) => {
   return (
     <View className="w-full h-25 my-4">
       <View className="flex-row justify-between items-end my-4 ">
