@@ -8,16 +8,20 @@ import Search from "../components/Search";
 import { categories } from "../data/categories";
 import { destinations } from "../data/destinations";
 import { useDebounce } from "../hooks/useDebounce";
+import { CategoryType } from "../types/category";
 import { filterDestinations } from "../utils/destinations";
 
 const HomeScreen = () => {
   const [searchText, setSearchText] = useState<string>("");
   const [selectedFilter, setSelectedFilter] = useState<string>("All");
+  const [selectedCategory, setSelectedCategory] = useState<CategoryType>();
+
   const debounceSearch = useDebounce(searchText);
   const filteredDestinations = filterDestinations(
     destinations,
     debounceSearch,
     selectedFilter,
+    selectedCategory,
   );
 
   return (
