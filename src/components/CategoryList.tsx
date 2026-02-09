@@ -28,8 +28,8 @@ const CategoryList = ({
       </View>
       <FlatList
         data={categories}
-        renderItem={({ item }) => <CategoryItem {...item} />}
-        keyExtractor={(item) => item.id.toString()}
+        renderItem={renderCategoryItem}
+        keyExtractor={(item) => item.slug}
         horizontal
         showsHorizontalScrollIndicator={false}
         removeClippedSubviews
