@@ -43,7 +43,11 @@ const HomeScreen = () => {
         <Search searchText={searchText} onChangeText={setSearchText} />
 
         {/* Categories */}
-        <CategoryList categories={categories} />
+        <CategoryList
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onSelectCategory={(categoryType) => setSelectedCategory(categoryType)}
+        />
 
         {/* FilterBar */}
         <FilterBar
