@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 import { Image, Text, TouchableOpacity } from "react-native";
 import { Category, CategoryType } from "../types/category";
@@ -16,15 +17,25 @@ const CategoryItem = ({
   const { title, image, slug } = category;
   return (
     <TouchableOpacity
-      className="items-center gap-2 mr-3"
-      onPress={() => console.log("category id ", id)}
+      className={clsx(
+        "items-center gap-2 p-2 mr-1 bg-neutral-100 rounded-2xl",
+        isSelected && "bg-red-200",
+      )}
+      onPress={() => onSelectCategory(slug)}
     >
       <Image
         source={image}
         style={{ width: 96, height: 96, resizeMode: "contain" }}
         className="w-20 h-20 rounded-2xl"
       />
-      <Text className="font-medium text-neutral-400">{title}</Text>
+      <Text
+        className={clsx(
+          "font-medium text-neutral-700",
+          isSelected && "font-bold text-md",
+        )}
+      >
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };
