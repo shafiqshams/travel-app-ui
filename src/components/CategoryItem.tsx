@@ -1,13 +1,19 @@
 import React from "react";
 import { Image, Text, TouchableOpacity } from "react-native";
+import { Category, CategoryType } from "../types/category";
 
 interface CategoryItemProps {
-  id: number;
-  title: string;
-  image: number;
+  category: Category;
+  isSelected: boolean;
+  onSelectCategory: (slug: CategoryType) => void;
 }
 
-const CategoryItem = ({ id, title, image }: CategoryItemProps) => {
+const CategoryItem = ({
+  category,
+  isSelected,
+  onSelectCategory,
+}: CategoryItemProps) => {
+  const { title, image, slug } = category;
   return (
     <TouchableOpacity
       className="items-center gap-2 mr-3"
