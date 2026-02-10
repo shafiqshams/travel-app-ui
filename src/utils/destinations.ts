@@ -40,3 +40,10 @@ const getFilteredDestinations = (
       return destinations;
   }
 };
+
+const getFilteredDestinationsByCategory = (
+  selectedCategory: CategoryType,
+  destinations: Destination[],
+): Destination[] => {
+  return destinations.filter((d) => d.category === selectedCategory);
+};
