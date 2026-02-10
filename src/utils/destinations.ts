@@ -1,11 +1,17 @@
+import { CategoryType } from "../types/category";
 import { Destination } from "../types/destination";
 
 export const filterDestinations = (
   destinations: Destination[],
   searchText: string,
   selectedFilter: string = "All",
+  selectedCategory: CategoryType | undefined,
 ): Destination[] => {
   let results = destinations;
+
+  if (selectedCategory) {
+    results = getFilteredDestinationsByCategory(selectedCategory, destinations);
+  }
 
   if (selectedFilter !== "All") {
     results = getFilteredDestinations(selectedFilter, destinations);
