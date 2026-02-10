@@ -47,6 +47,7 @@ const HomeScreen = () => {
           categories={categories}
           selectedCategory={selectedCategory}
           onSelectCategory={(categoryType) => setSelectedCategory(categoryType)}
+          onResetCategory={() => setSelectedCategory(undefined)}
         />
 
         {/* FilterBar */}
