@@ -29,7 +29,7 @@ export const filterDestinations = (
 const getFilteredDestinations = (
   selectedFilter: string,
   destinations: Destination[],
-) => {
+): Destination[] => {
   switch (selectedFilter) {
     case "Popular":
       return destinations.filter((destination) => destination.rating >= 4.2);
