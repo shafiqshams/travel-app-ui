@@ -14,7 +14,7 @@ export const filterDestinations = (
   }
 
   if (selectedFilter !== "All") {
-    results = getFilteredDestinations(selectedFilter, destinations);
+    results = getFilteredDestinations(selectedFilter, results);
   }
 
   const query = searchText?.trim().toLowerCase();
