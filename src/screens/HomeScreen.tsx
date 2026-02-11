@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import CategoryList from "../components/CategoryList";
@@ -24,6 +24,10 @@ const HomeScreen = () => {
     selectedCategory,
   );
 
+  const handleResetCategory = useCallback(() => {
+    setSelectedCategory(undefined);
+  }, []); // Stable forever
+
   return (
     <SafeAreaView className="flex flex-1 bg-white">
       <ScrollView className="mx-5" showsVerticalScrollIndicator={false}>
@@ -46,8 +50,8 @@ const HomeScreen = () => {
         <CategoryList
           categories={categories}
           selectedCategory={selectedCategory}
-          onSelectCategory={(categoryType) => setSelectedCategory(categoryType)}
-          onResetCategory={() => setSelectedCategory(undefined)}
+          onSelectCategory={setSelectedCategory}
+          onResetCategory={handleResetCategory}
         />
 
         {/* FilterBar */}
