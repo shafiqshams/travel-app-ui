@@ -1,5 +1,5 @@
 import AntDesign from "@expo/vector-icons/AntDesign";
-import React from "react";
+import React, { useCallback } from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { Category, CategoryType } from "../types/category";
 import CategoryItem from "./CategoryItem";
@@ -17,12 +17,15 @@ const CategoryList = ({
   onSelectCategory,
   onResetCategory,
 }: CategoryListProps) => {
-  const renderCategoryItem = ({ item }: { item: Category }) => (
-    <CategoryItem
-      category={item}
-      isSelected={item.slug === selectedCategory}
-      onSelectCategory={onSelectCategory}
-    />
+  const renderCategoryItem = useCallback(
+    ({ item }: { item: Category }) => (
+      <CategoryItem
+        category={item}
+        isSelected={item.slug === selectedCategory}
+        onSelectCategory={onSelectCategory}
+      />
+    ),
+    [onSelectCategory, selectedCategory],
   );
 
   return (
@@ -55,4 +58,4 @@ const CategoryList = ({
   );
 };
 
-export default CategoryList;
+export default React.memo(CategoryList);
